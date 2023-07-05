@@ -1,82 +1,107 @@
-MainPage:
+ThManager:
+    MenuPage:
+    DelevaryPage:
 
-<MainPage@MDGridLayout>:
-    cols:2
-    rows:2
-    size_hint:0.7,0.7
-    pos_hint: {"center_x": 0.5, "center_y": 0.5}
-    spacing:10,10
 
-    MDCard:
-        padding: 4
-        md_bg_color:254/255,129/255,49/255,1
-        MDRelativeLayout:
-            Image:
+<DelevaryPage>:
+    name:'DelevaryPage'
+    MDBoxLayout:
+        Button:
+            text:'hello'
 
-                source:'images/analytics.png'
-                pos_hint: {"center_x": 0.5, "center_y": 0.5}
 
-            MDLabel:
-                pos_hint: {"center_x": 0.5, "bottom": 0}
-                id: label
-                text: 'Statistiques'
-                color: "white"
-                adaptive_size: True
-                pos: "12dp", "12dp"
-                bold: True
-                font_size:'18sp'
-    MDCard:
-        padding: 4
-        md_bg_color:59/255,1/255,133/255,1
-        MDRelativeLayout:
-            Image:
-                source:'images/checklist.png'
 
-                pos_hint: {"center_x": 0.5, "center_y": 0.5}
 
-            MDLabel:
-                pos_hint: {"center_x": 0.5, "bottom": 0}
-                id: label
-                text: 'Livraison'
-                adaptive_size: True
-                color: "white"
-                pos: "12dp", "12dp"
-                bold: True
-                font_size:'18sp'
-    MDCard:
-        padding: 4
-        md_bg_color:0/255,166/255,176/255,1
-        MDRelativeLayout:
-            Image:
-                source:'images/invoice.png'
-                pos_hint: {"center_x": 0.5, "center_y": 0.5}
 
-            MDLabel:
-                pos_hint: {"center_x": 0.5, "bottom": 0}
-                id: label
-                text: 'Factures'
-                adaptive_size: True
-                color: "white"
-                pos: "12dp", "12dp"
-                bold: True
-                font_size:'18sp'
-    MDCard:
-        padding: 4
-        md_bg_color:252/255,85/255,93/255,1
-        MDRelativeLayout:
-            Image:
-                source:'images/borrow.png'
-                pos_hint: {"center_x": 0.5, "center_y": 0.5}
 
-            MDLabel:
-                pos_hint: {"center_x": 0.5, "bottom": 0}
-                id: label
-                text: 'Dettes'
-                adaptive_size: True
-                color: "white"
-                pos: "12dp", "12dp"
-                bold: True
-                font_size:'18sp'
+
+
+
+
+
+
+
+
+<MenuPage>:
+    name:'MenuPage'
+    MDGridLayout:
+        cols:2
+        rows:2
+        size_hint:0.7,0.7
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        spacing:10,10
+
+        MDCard:
+            padding: 4
+            md_bg_color:254/255,129/255,49/255,1
+            MDRelativeLayout:
+                Image:
+
+                    source:'images/analytics.png'
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                MDLabel:
+                    pos_hint: {"center_x": 0.5, "bottom": 0}
+                    id: label
+                    text: 'Statistiques'
+                    color: "white"
+                    adaptive_size: True
+                    pos: "12dp", "12dp"
+                    bold: True
+                    font_size:'18sp'
+        MDCard:
+            padding: 4
+            on_touch_down: app.root.current = 'DelevaryPage'
+            md_bg_color:59/255,1/255,133/255,1
+            MDRelativeLayout:
+                Image:
+                    source:'images/checklist.png'
+
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                MDLabel:
+                    pos_hint: {"center_x": 0.5, "bottom": 0}
+                    id: label
+                    text: 'Livraison'
+                    adaptive_size: True
+                    color: "white"
+                    pos: "12dp", "12dp"
+                    bold: True
+                    font_size:'18sp'
+        MDCard:
+            padding: 4
+            md_bg_color:0/255,166/255,176/255,1
+            MDRelativeLayout:
+                Image:
+                    source:'images/invoice.png'
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                MDLabel:
+                    pos_hint: {"center_x": 0.5, "bottom": 0}
+                    id: label
+                    text: 'Factures'
+                    adaptive_size: True
+                    color: "white"
+                    pos: "12dp", "12dp"
+                    bold: True
+                    font_size:'18sp'
+        MDCard:
+            padding: 4
+            md_bg_color:252/255,85/255,93/255,1
+            MDRelativeLayout:
+                Image:
+                    source:'images/borrow.png'
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                MDLabel:
+                    pos_hint: {"center_x": 0.5, "bottom": 0}
+                    id: label
+                    text: 'Dettes'
+                    adaptive_size: True
+                    color: "white"
+                    pos: "12dp", "12dp"
+                    bold: True
+                    font_size:'18sp'
 
 
 
